@@ -5,7 +5,7 @@
  * @a: The array of integers to be reversed
  * @n: The number of elements in the array
  */
-void _reverse_array(int *a, int n)
+void reverse_array(int *a, int n)
 {
 	int tmp, index;
 
