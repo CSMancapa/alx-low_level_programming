@@ -18,12 +18,13 @@ int main(void)
 		c++;
 	}
 
-	c = 'A';
+	char C = 'A';
+
 	while
-	(c <= 'Z');
+	(C <= 'Z');
 	{
-		putchar(c);
-		c++;
+		putchar(C);
+		C++;
 	}
 	putchar('\n');
 	return (0);
