@@ -24,7 +24,7 @@ int main(void)
 	(C <= 'Z');
 	{
 		putchar(C);
-		C++;
+		c++;
 	}
 	putchar('\n');
 	return (0);
