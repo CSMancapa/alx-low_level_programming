@@ -1,23 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
-/*
- * Function to return the number of elements in a dlistint_t list
+/**
+ *  * dlistint_len - returns the number of elements in
+ *   * a double linked list
+ *    *
+ *     * @h: head of the list
+ *      * Return: the number of nodes
  */
-
-size_t dlistint_len(const dlistint_t *h);
+size_t dlistint_len(const dlistint_t *h)
 {
-	const dlistint_t *current = h;
-	size_t count = 0;
+	int count;
 
-/*
- * Loop through the list and count the number of elements
- */
-	while (current != NULL)
+	count = 0;
+
+	if (h == NULL)
+		return (count);
+
+	while (h->prev != NULL)
+		h = h->prev;
+
+	while (h != NULL)
 	{
-		current = current->next;
 		count++;
+		h = h->next;
 	}
 
 	return (count);
